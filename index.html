@@ -9,7 +9,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <title>Document</title>
+    <title>PhTube</title>
   </head>
   <body>
     <header class="px-12 pt-12 items-center space-y-6">
@@ -18,7 +18,7 @@
         <div class="hidden md:flex"">
           <button id="sortBtn" onclick="sorting()" class="btn btn-neutral md:-ml-20">Sort by view</button>
         </div>
-        <div><a href="index.html" class="btn">Blog</a></div>
+        <div><a target="_blank" href="blog.html" class="btn bg-red-600 hover:bg-red-700 text-white">Blog</a></div>
         <div class="md:hidden">
           <button id="sortBtn" onclick="sorting()" class="btn btn-neutral md:-ml-20">Sort by view</button>
         </div>
@@ -26,17 +26,17 @@
       <hr class="border-gray-400" />
     </header>
     <main class="container mx-auto">
-      <div class="flex justify-center pt-8">
+      <div class="flex justify-center py-5">
         <div id="category-container" class="flex flex-wrap gap-4">
          
         </div>
       </div>
 
-      <section id="error" class="hidden my-28 items-center space-y-5 ">
+      <section id="error" class="hidden my-14 items-center space-y-5 ">
         <div class="flex justify-center"><img class="w-60" src="Icon.png" alt=""></div>
         <h1 class="text-3xl font-semibold text-center">Oops!! Sorry, There is no <br> content here</h1>
       </section>
-<div id="loading" class="text-center my-64">
+<div id="loading" class="text-center my-48 p-4">
 <progress class="progress w-56"></progress>
 </div>
 <!-- cards -->
@@ -44,7 +44,11 @@
        
       </div>
     </main>
-    <footer></footer>
+    <footer class="footer footer-center p-4 mt-2 bg-base-300 text-base-content">
+  <div>
+    <p>© 2023 - Musleh Practicing Web-Developing</p>
+  </div>
+</footer>
     
     <script src="js/phTube.js"></script>
   </body>

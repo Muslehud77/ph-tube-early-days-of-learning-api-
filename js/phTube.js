@@ -52,6 +52,7 @@ const catDetail = async (id=1000) =>{
 
     if(detail.length === 0){
         noContent.classList.remove("hidden");
+        loading.classList.add("hidden");
         return sortBtn.classList.add("hidden");  
     }else{
         noContent.classList.add('hidden')
