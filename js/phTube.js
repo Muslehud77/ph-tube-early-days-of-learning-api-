@@ -84,16 +84,17 @@ const catDetail = async (id=1000) =>{
         } else {
           const h = Math.floor(time / 3600);
           const m = time % 60;
-          return ` <div class="absolute bg-black text-white p-1 rounded-xl text-xs right-8 top-80"><p>${h}hrs ${m}min ago</p></div>`;
+          return ` <div class="absolute bg-black text-white p-1 rounded-xl text-xs right-8 bottom-32"><p>${h}hrs ${m}min ago</p></div>`;
         }
       };
       // console.log(h, m);
 
       const div = document.createElement("div");
-      div.classList = "card card-compact bg-base-100 relative";
+      div.classList = "flex flex-col items-center";
 
       div.innerHTML = `
-        <figure class="px-4 pt-4">
+       <div class="card w-96 card-compact bg-base-100 relative">
+   <figure class="px-4 pt-4">
             <img
               src="${d.thumbnail}"
               alt=""
@@ -103,10 +104,10 @@ const catDetail = async (id=1000) =>{
           <div class="p-4">
             <div class="flex gap-2">
               
-                <div class="w-12">
+                <div class="w-12 h-12">
                   <img
                     src="${d.authors[0].profile_picture}"
-                    class="rounded-full"
+                    class="rounded-full w-12 h-12"
                   />
                 </div>
              
@@ -131,6 +132,7 @@ const catDetail = async (id=1000) =>{
              
           </div>
         ${postStatus()}
+</div>
         
         `;
 
