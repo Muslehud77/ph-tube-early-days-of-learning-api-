@@ -42,12 +42,13 @@ const active = (data)=>{
 
 const catDetail = async (id=1000) =>{
     loading.classList.remove("hidden");
+    cardContainer.innerHTML = ``;
     categoryId = id;
     noContent.classList.add("hidden");
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
     const data = await res.json()
     const detail = data.data;
-    cardContainer.innerHTML = ``
+    
 
 
     if(detail.length === 0){
@@ -93,12 +94,12 @@ const catDetail = async (id=1000) =>{
       div.classList = "flex flex-col items-center";
 
       div.innerHTML = `
-       <div class="card w-96 card-compact bg-base-100 relative">
+       <div class="card w-96 xl:w-full card-compact bg-base-100 relative">
    <figure class="px-4 pt-4">
             <img
               src="${d.thumbnail}"
               alt=""
-              class="rounded-2xl w-full"
+              class="rounded-2xl w-full h-60"
             />
           </figure>
           <div class="p-4">
